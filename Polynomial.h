@@ -1,5 +1,7 @@
 #pragma once
 
+//Term
+
 class Term
 {
 	friend class Polynomial;
@@ -11,7 +13,7 @@ public:
 	int getExp() const;
 };
 
-//
+//Polynomial
 
 class Polynomial
 {
