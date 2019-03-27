@@ -1,6 +1,8 @@
 #include <iostream>
 #include "Polynomial.h"
 
+//Term
+
 int Term::getCoef() const
 {
 	return coef;
@@ -11,7 +13,7 @@ int Term::getExp() const
 	return exp;
 }
 
-//
+//Polynomial
 
 std::ostream &operator<<(std::ostream &os, const Polynomial &polynomial)
 {
