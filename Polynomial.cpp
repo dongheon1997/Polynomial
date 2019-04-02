@@ -170,9 +170,9 @@ const Polynomial Polynomial::operator*(const Polynomial &other) const
 		Polynomial middle;
 		for (int j = 0; j < other.terms; j += 1)
 		{
-			middle[i].addTerm(termArr[i].coef * other.termArr[j].coef, termArr[i].exp + other.termArr[j].exp);
+			middle.addTerm(termArr[i].coef * other.termArr[j].coef, termArr[i].exp + other.termArr[j].exp);
 		}
-		result = result + middle[i];
+		result = result + middle;
 	}
 
 	return result;
