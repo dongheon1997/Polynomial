@@ -164,10 +164,10 @@ const Polynomial Polynomial::operator+(const Polynomial &other) const
 const Polynomial Polynomial::operator*(const Polynomial &other) const
 {
 	Polynomial result;
-	Polynomial *middle = new Polynomial[terms];
 
 	for (int i = 0; i < terms; i += 1)
 	{
+		Polynomial middle;
 		for (int j = 0; j < other.terms; j += 1)
 		{
 			middle[i].addTerm(termArr[i].coef * other.termArr[j].coef, termArr[i].exp + other.termArr[j].exp);
@@ -175,6 +175,5 @@ const Polynomial Polynomial::operator*(const Polynomial &other) const
 		result = result + middle[i];
 	}
 
-	delete[] middle;
 	return result;
 }
